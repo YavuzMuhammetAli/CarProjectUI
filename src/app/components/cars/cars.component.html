@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-3" *ngFor="let car of cars">
+    <div class="card-deck">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://cdn.motor1.com/images/mgl/7MK27/s3/abt-audi-rs7-r.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{car.marka}}</h5>
+          <p class="card-text">
+            ARABA HAKKINDA AÇIKLAMA OLMALI
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Arabanın kilometresi {{car.kilometre}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

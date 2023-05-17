@@ -1,0 +1,113 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Yeni Kullanıcı Kayıt</h5></div>
+      <div class="card-body">
+        <form [formGroup]="userAddForm">
+          <div class="mb-3">
+            <label for="productName">İsim</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="isim"
+                formControlName="isim"
+                class="form-control"
+                placeholder="İsim"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="categoryId">Soyisim</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="soyisim"
+                formControlName="soyisim"
+                class="form-control"
+                placeholder="Soyisim"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="unitInStock">TC</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="tc"
+                formControlName="tc"
+                class="form-control"
+                placeholder="Tc"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="unitPrice">Email</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="unitPrice">Doğum Yılı</label>
+            <div class="form-group">
+              <div class="col-12">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="dp"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d="ngbDatepicker"
+                    id="dogum_yili"
+                    formControlName="dogum_yili"
+                    class="form-control"
+                    placeholder="Doğum Yılı"
+                  />
+                  <button
+                    class="btn btn-outline-secondary bi bi-calendar3"
+                    (click)="d.toggle()"
+                    type="button"
+                  >
+                    takvim
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="unitPrice">Telefon</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="telefon"
+                formControlName="telefon"
+                class="form-control"
+                placeholder="Telefon"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="unitPrice">Şifre</label>
+            <div class="form-group">
+              <input
+                type="password"
+                id="sifre"
+                formControlName="sifre"
+                class="form-control"
+                placeholder="Şifre"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+      </div>
+    </div>
+  </div>
+</div>
