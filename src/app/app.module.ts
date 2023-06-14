@@ -17,6 +17,9 @@ import { GoogleMapsComponent } from './components/google-maps/google-maps.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule} from 'ngx-toastr';
 import { CarAddComponent } from './components/car-add/car-add.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { CarAddComponent } from './components/car-add/car-add.component';
     NavBarComponent,
     UserComponent,
     GoogleMapsComponent,
-    CarAddComponent
+    CarAddComponent,
+    LoginComponent,
+    RegisterComponent,
+    CartSummaryComponent
   ],
   imports: [
     BrowserModule,

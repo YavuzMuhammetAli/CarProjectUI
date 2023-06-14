@@ -5,13 +5,17 @@ import { CartItem } from 'src/app/models/cartItem';
 import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css'],
+  selector: 'app-cart-summary',
+  templateUrl: './cart-summary.component.html',
+  styleUrls: ['./cart-summary.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class CartSummaryComponent implements OnInit {
+  dataLoaded = false;
+  imageUrl='https://localhost:7075/Uploads/Images';
+  carDetail:CarDetail[]=[];
   cartItems: CartItem[] = [];
-  
+  cart:CartItem[]=[];
+
   constructor(
     private cartService: CartService,
     private toastrService: ToastrService

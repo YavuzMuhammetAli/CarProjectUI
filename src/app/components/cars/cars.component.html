@@ -1,22 +1,31 @@
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-primary"
+  role="status"
+>
+  <span class="visually-hidden">Loading...</span>
+</div>
 <div class="row">
-  <div class="col-sm-3" *ngFor="let car of cars">
+  <div class="col-sm-3" *ngFor="let cardetail of carDetail">
     <div class="card-deck">
-      <div class="card">
+      <div class="card mt-3">
         <img
           class="card-img-top"
-          src="https://cdn.motor1.com/images/mgl/7MK27/s3/abt-audi-rs7-r.jpg"
-          alt="Card image cap"
+          [src]="imageUrl+cardetail.imagePath"
+          alt="Car image"
         />
         <div class="card-body">
-          <h5 class="card-title">{{car.marka}}</h5>
+          <h5 class="card-title">{{cardetail.brandName}}</h5>
           <p class="card-text">
-            ARABA HAKKINDA AÇIKLAMA OLMALI
+            {{cardetail.colorName}}
           </p>
           <p class="card-text">
-            <small class="text-muted">Arabanın kilometresi {{car.kilometre}}</small>
+            <small class="text-muted">{{cardetail.description}}</small>
           </p>
+          <button (click)="addToCart(cardetail)" class="btn btn-success">Kirala</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+

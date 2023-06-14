@@ -1,10 +1,9 @@
 export interface User{
-    id:number;
-    isim:string;
-    soyisim:string;
-    tc:string;
+    Id:number;
+    FirstName:string;
+    LastName:string;
     email:string;
-    dogum_yili:Date;
-    telefon:string;
-    sifre:string;
+    Status:boolean;
+    TC:string;
+    BirthDay:Date;
 }

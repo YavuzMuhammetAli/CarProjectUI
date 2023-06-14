@@ -1,0 +1,87 @@
+<div class="content">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h5 class="title">Yeni Kullanıcı Kayıt</h5></div>
+        <div class="card-body">
+          <form [formGroup]="registerForm">
+            <div class="mb-3">
+              <label for="productName">Email</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="Email"
+                  formControlName="Email"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="categoryId">Şifre</label>
+              <div class="form-group">
+                <input
+                  type="password"
+                  id="Password"
+                  formControlName="Password"
+                  class="form-control"
+                  placeholder="Şifre"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="unitInStock">Ad</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="FirstName"
+                  formControlName="FirstName"
+                  class="form-control"
+                  placeholder="Ad"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="unitPrice">Soyad</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="LastName"
+                  formControlName="LastName"
+                  class="form-control"
+                  placeholder="Soyad"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="unitPrice">TC</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="TC"
+                  formControlName="TC"
+                  class="form-control"
+                  placeholder="TC"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="unitPrice">Doğum Tarihi</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="BirthDay"
+                  formControlName="BirthDay"
+                  class="form-control"
+                  placeholder="Yıl-Gün-Ay"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
